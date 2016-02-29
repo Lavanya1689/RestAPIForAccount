@@ -1,6 +1,7 @@
 # RestAPIForAccount
 
 Introduction:
+
 This project is about creating a Rest API end point in Salesforce that updates the Account object. A BrainTreeId and Name is given in the request body. When a request is received, the account object is queried with matching BrainTreeId on the Account. 
 (i) If it does exist then we need to query the accounts again to see if there is parent account with the name matching from the request body and update the previously matched account's parent id with the lateral one. 
 (ii) If it doesn't exist then query the Accounts with matching Name, if there is a match create a new Account with that name and assign parentId to the matching account, if there is no match then just create a new account with that name
